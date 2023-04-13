@@ -1,0 +1,14 @@
+.NotFoundContainer {
+  background-color: #000000;
+  height: 100vh;
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.title {
+  color: white;
+}
