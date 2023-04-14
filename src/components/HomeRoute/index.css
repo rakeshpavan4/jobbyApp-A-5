@@ -1,0 +1,18 @@
+.home_container {
+  background-size: cover;
+  color: white;
+  background-image: url('https://assets.ccbp.in/frontend/react-js/home-lg-bg.png');
+  height: 100vh;
+}
+.home_button {
+  background-color: #6366f1;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  height: 30px;
+  padding: 10px;
+}
+.home_description {
+  padding-left: 50px;
+  padding-top: 100px;
+}
