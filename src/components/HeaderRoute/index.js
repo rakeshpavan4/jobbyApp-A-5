@@ -1,5 +1,5 @@
 import Cookies from 'js-cookie'
-import {Link} from 'react-router-dom'
+import {Link, withRouter} from 'react-router-dom'
 import './index.css'
 
 const HeaderRoute = props => {
@@ -11,26 +11,27 @@ const HeaderRoute = props => {
   }
 
   return (
-    <div className="header_container">
+    <nav className="header_container">
       <img
         src="https://assets.ccbp.in/frontend/react-js/logo-img.png"
         alt="website logo"
         className="header_logo-image"
       />
-      <div className="home_job">
+
+      <ul className="home_job">
         <Link to="/">
           <li className="space">Home</li>
         </Link>
-        <Link to="/">
+        <Link to="/Job">
           <li className="space">Jobs</li>
         </Link>
-      </div>
+      </ul>
 
       <button type="button" className="header_button" onClick={onClickLogout}>
         Logout
       </button>
-    </div>
+    </nav>
   )
 }
 
-export default HeaderRoute
+export default withRouter(HeaderRoute)

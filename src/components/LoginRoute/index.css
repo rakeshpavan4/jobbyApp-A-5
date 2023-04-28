@@ -27,11 +27,17 @@
   background-color: transparent;
   margin-bottom: 5px;
   color: white;
+  border-color: #7e858e;
+  border-width: 2px;
+  outline: none;
 }
 .password_input {
   background-color: transparent;
   margin-bottom: 5px;
   color: white;
+  border-width: 2px;
+
+  border-color: #7e858e;
 }
 .user_label {
   color: white;
@@ -44,6 +50,7 @@
   background-color: #6366f1;
   border-radius: 5px;
   cursor: pointer;
+  border: none;
 }
 .error-message {
   color: red;

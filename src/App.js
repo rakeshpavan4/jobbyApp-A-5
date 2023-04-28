@@ -4,6 +4,7 @@ import HomeRoute from './components/HomeRoute'
 import JobItemDetailsRoute from './components/JobItemDetailsRoute'
 import JobsRoute from './components/JobsRoute'
 import NotFoundRoute from './components/NotFoundRoute'
+import ProtectedRoute from './components/ProtectedRoute'
 
 import './App.css'
 
@@ -51,10 +52,10 @@ const salaryRangesList = [
 const App = () => (
   <Switch>
     <Route exact path="/Login" component={LoginRoute} />
-    <Route exact path="/" component={HomeRoute} />
-    <Route exact path="/JobItem" component={JobItemDetailsRoute} />
+    <ProtectedRoute exact path="/" component={HomeRoute} />
+    <ProtectedRoute exact path="/JobItem" component={JobItemDetailsRoute} />
 
-    <Route exact path="/job" component={JobsRoute} />
+    <ProtectedRoute exact path="/Job" component={JobsRoute} />
 
     <Route component={NotFoundRoute} />
   </Switch>

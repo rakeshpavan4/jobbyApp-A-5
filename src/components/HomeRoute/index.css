@@ -11,6 +11,7 @@
   border: none;
   height: 30px;
   padding: 10px;
+  cursor: pointer;
 }
 .home_description {
   padding-left: 50px;
