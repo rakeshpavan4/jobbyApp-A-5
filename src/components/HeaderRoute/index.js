@@ -12,11 +12,13 @@ const HeaderRoute = props => {
 
   return (
     <nav className="header_container">
-      <img
-        src="https://assets.ccbp.in/frontend/react-js/logo-img.png"
-        alt="website logo"
-        className="header_logo-image"
-      />
+      <Link to="/">
+        <img
+          src="https://assets.ccbp.in/frontend/react-js/logo-img.png"
+          alt="website logo"
+          className="header_logo-image"
+        />
+      </Link>
 
       <ul className="home_job">
         <Link to="/">
