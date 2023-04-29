@@ -1,7 +1,7 @@
-import {Switch, Route} from 'react-router-dom'
+import {Switch, Route, Redirect} from 'react-router-dom'
 import LoginRoute from './components/LoginRoute'
 import HomeRoute from './components/HomeRoute'
-import JobItemDetailsRoute from './components/JobItemDetailsRoute'
+import JobItemDetails from './components/JobItemDetails'
 import JobsRoute from './components/JobsRoute'
 import NotFoundRoute from './components/NotFoundRoute'
 import ProtectedRoute from './components/ProtectedRoute'
@@ -53,11 +53,12 @@ const App = () => (
   <Switch>
     <Route exact path="/Login" component={LoginRoute} />
     <ProtectedRoute exact path="/" component={HomeRoute} />
-    <ProtectedRoute exact path="/JobItem" component={JobItemDetailsRoute} />
+    <ProtectedRoute exact path="/Jobs/:id" component={JobItemDetails} />
 
-    <ProtectedRoute exact path="/Job" component={JobsRoute} />
+    <ProtectedRoute exact path="/Jobs" component={JobsRoute} />
 
-    <Route component={NotFoundRoute} />
+    <Route path="/not-found" component={NotFoundRoute} />
+    <Redirect to="not-found" />
   </Switch>
 )
 export default App
